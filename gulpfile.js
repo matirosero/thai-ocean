@@ -29,7 +29,7 @@ var paths = {
 	imgPath: 'assets/img/'
 };
 
-var bsProxy = 'mandir.dev';
+var bsProxy = 'tyma.dev';
 
 
 ////////////////////////////////////////////////////////////////////////////////
