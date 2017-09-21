@@ -1,0 +1,34 @@
+.course-list {
+	@include reset-list;
+
+	&.inline-course-list li {
+		display: inline-block;
+		vertical-align:top;
+		margin: 0 1%;
+		width: 31%;
+	}
+
+	.hero-courses & {
+		color: $white;
+		li {
+			background-color: rgba(0, 0, 0, .35);
+			padding: 1rem 2rem;
+		}
+		a {
+			color: $color-13;
+			@include hover {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.course-title,
+.course-date {
+	display: block;
+}
+
+.course-date {
+	@include sans-serif-style;
+	font-size: 12px;
+}

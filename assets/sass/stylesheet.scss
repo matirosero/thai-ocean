@@ -28,6 +28,7 @@
  * - DROP DOWN MOBILE
  * - FULL SCREEN MOBILE
  * - PAGE HEADER
+ * - COURSES
  * - BLOG
  * - SIDEBAR
  * - CUSTOM SELECTS
@@ -133,6 +134,11 @@
 	$PAGE HEADER
 *------------------------------------*/
 @import "components/page-header";
+
+/*------------------------------------*
+	$COURSES
+*------------------------------------*/
+@import "components/courses/courses";
 
 /*------------------------------------*
 	$BLOG

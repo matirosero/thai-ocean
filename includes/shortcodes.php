@@ -21,7 +21,9 @@ function tyma_list_courses_shortcode($atts) {
         $post;
 
     extract(shortcode_atts(array(
-        'event' => 'all',
+        'show' => 10,
+        'inline' => 'no',
+        'images' => 'no',
     ), $atts));
 
 	$today = date('Y-m-d');
@@ -29,7 +31,7 @@ function tyma_list_courses_shortcode($atts) {
     // WP Query
 	$args = array(
 		'post_type' => 'course',
-		'posts_per_page' => '10',
+		'posts_per_page' => $show,
 		//'caller_get_posts' => 10,
 		'meta_key' => 'custom_datestart',
 		'orderby' => 'meta_value',
@@ -45,14 +47,20 @@ function tyma_list_courses_shortcode($atts) {
 		),
 	);
 
-
     $query = new WP_Query( $args );
 
     if( ! $query->have_posts() ) :
         return false;
     else :
 
-		$return = '<ul>';
+		$classes = 'course-list';
+
+		if ( $inline == 'yes' ) :
+			$classes .= ' inline-course-list';
+		endif;
+
+
+		$return = '<ul class="'.$classes.'">';
 
 		while( $query->have_posts() ) : $query->the_post();
 
@@ -78,8 +86,8 @@ function tyma_list_courses_shortcode($atts) {
 			}
 
 			$return .= '<li>'.
-				'<a href="'.get_permalink().'">'.get_the_title().'</a><br />
-				<span class="date">'.$course_dates.'</span>
+				'<a href="'.get_permalink().'" class="course-title">'.get_the_title().'</a> 
+				<span class="course-date">'.$course_dates.'</span>
 			</li>';
 
         endwhile;

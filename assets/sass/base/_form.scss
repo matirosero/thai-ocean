@@ -242,9 +242,10 @@ form legend {
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.button {
+.button,
+.elementor-button {
 	display: inline-block;
-    font-family: inherit;
+    font-family: $sans-serif-family;
     background-color: $color-5;
     color: $color-1;
     font-size: 12px;
