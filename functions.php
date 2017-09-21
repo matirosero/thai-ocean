@@ -20,6 +20,9 @@ include( 'includes/debug.php' );
 // Enqueue and dequeue
 include( 'includes/enqueue.php' );
 
+// Enqueue and dequeue
+include( 'includes/shortcodes.php' );
+
 // Function overrides
 // include( 'includes/overrides.php' );
 
