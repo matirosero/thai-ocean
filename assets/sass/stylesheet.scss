@@ -13,6 +13,8 @@
  * BASE
  * - MAIN
  * - NORMALIZE
+ * - MEDIA QUERIES
+ * - UTILITY
  * - LAYOUTS
  * - COMPONENTS
  * - TYPOGRAPHY
@@ -56,6 +58,16 @@
 	$NORMALIZE
 *------------------------------------*/
 @import "base/normalize";
+
+/*------------------------------------*
+	$MEDIA QUERIES
+*------------------------------------*/
+@import "base/mq";
+
+/*------------------------------------*
+	$UTILITY
+*------------------------------------*/
+@import "base/utility";
 
 /*------------------------------------*
 	$LAYOUTS

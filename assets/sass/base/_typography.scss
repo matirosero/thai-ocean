@@ -34,28 +34,30 @@ h6 {
 	font-weight: $heading-font-weight;
 	margin: 10px 0;
 	color: $heading-font-color;
-	line-height: 1.4;
+	line-height: 1;
 	font-family: $heading-font-family;
+	letter-spacing: 2px;
 }
 
 h1 {
-	font-size: 23px;
+	font-size: 24px;
+	font-weight: 600;
 }
 
 h2 {
-	font-size: 20px;
+	font-size: 24px;
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 h4 {
-	font-size: 17px;
+	font-size: 18px;
 }
 
 h5 {
-	font-size: 15px;
+	font-size: 16px;
 }
 
 h6 {

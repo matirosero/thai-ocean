@@ -1,24 +1,49 @@
 .course-list {
 	@include reset-list;
 
-	&.inline-course-list li {
-		display: inline-block;
-		vertical-align:top;
-		margin: 0 1%;
-		width: 31%;
+	&.inline-course-list > li {
+		
+		@media #{$medium-up} {
+			display: inline-block;
+			vertical-align:top;
+			margin: 0 1%;
+			width: 48%;
+		}
+		@media #{$large-up} {
+			width: 31%;
+			&:last-child {
+				display: inline-block;
+			}
+		}
 	}
 
 	.hero-courses & {
-		color: $white;
-		li {
+		color: $offwhite;
+		> li {
 			background-color: rgba(0, 0, 0, .35);
 			padding: 1rem 2rem;
+			display: none;
+			&:first-child {
+				display: inline-block;
+			}
+			@media #{$medium-up} {
+				display: inline-block;
+
+			}
+			@media #{$medium-only} {
+				&:last-child {
+					display: none;
+				}
+			}
 		}
 		a {
-			color: $color-13;
+			color: $white;
 			@include hover {
 				color: $orange;
 			}
+		}
+		.meta {
+			margin: 12px 0 0;
 		}
 	}
 }

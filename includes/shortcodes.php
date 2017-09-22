@@ -62,6 +62,7 @@ function tyma_list_courses_shortcode($atts) {
 
 		$return = '<ul class="'.$classes.'">';
 
+
 		while( $query->have_posts() ) : $query->the_post();
 
 			$start_month = date("M", strtotime(get_post_meta($post->ID, 'custom_datestart', true)));
@@ -87,7 +88,9 @@ function tyma_list_courses_shortcode($atts) {
 
 			$return .= '<li>'.
 				'<a href="'.get_permalink().'" class="course-title">'.get_the_title().'</a> 
-				<span class="course-date">'.$course_dates.'</span>
+				<ul class="meta clr">
+					<li class="meta-date"><i class="icon-clock"></i>'.$course_dates.'</li>
+				</ul>
 			</li>';
 
         endwhile;

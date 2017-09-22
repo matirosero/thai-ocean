@@ -110,3 +110,43 @@
     font-family: $sans-serif-family;
     text-transform: uppercase;
 }
+
+@mixin button-ocean {
+    display: inline-block;
+    font-family: $sans-serif-family;
+    background-color: $color-5;
+    color: $color-1;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 14px 20px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1;
+    @include transition( all .3s ease );
+}
+
+@mixin button-basic( $background: $orange, $background-hover: $dark-orange, $color: $white ) {
+    display: inline-block;
+    font-family: $sans-serif-family;
+    background-color: $background;
+    color: $white;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px 45px 20px 45px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 2px;
+    border-radius: 0px 0px 0px 0px;
+    @include transition( all .3s ease );
+    @include hover {
+        background-color: $background-hover;
+    }
+}
