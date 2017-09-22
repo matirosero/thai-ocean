@@ -58,6 +58,15 @@ body.content-full-screen #content-wrap {
 	border: 0 !important;
 }
 
+@media #{$large-up} {
+	.post-type-archive .content-area {
+		width: 66.67% !important;
+		margin: 0 auto !important;
+		float: none;
+	}
+}
+
+
 .content-full-screen .content-area {
 	float: none;
 	width: 100% !important;
