@@ -49,6 +49,8 @@ body.content-full-screen #content-wrap,
 }
 
 .content-full-width .content-area,
+.post-type-archive .content-area,
+.single-course .content-area,
 body.content-full-screen #content-wrap {
 	width: 100% !important;
 	max-width: none !important;
