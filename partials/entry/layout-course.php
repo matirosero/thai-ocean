@@ -24,7 +24,6 @@ $classes = oceanwp_post_entry_classes(); ?>
 
 		<?php
 
-
 		// Featured Image
 		get_template_part( 'partials/entry/media/blog-entry' );
 
@@ -37,8 +36,13 @@ $classes = oceanwp_post_entry_classes(); ?>
 		// Content
 		get_template_part( 'partials/entry/content', 'course' );
 
+		// Location
+		get_template_part( 'partials/entry/location', 'course' );
+
 		// Read more button
 		get_template_part( 'partials/entry/readmore' );
+
+
 
 		?>
 

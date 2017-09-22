@@ -39,7 +39,6 @@ function tyma_list_courses_shortcode($atts) {
 		    'meta_query' => array(
 				array(
 					'key' => 'custom_datestart',
-					// 'meta-value' => $value,
 					'value' => $today,
 					'compare' => '>=',
 					'type' => 'CHAR'

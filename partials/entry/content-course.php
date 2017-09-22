@@ -12,11 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="blog-entry-summary clr"<?php oceanwp_schema_markup( 'entry_content' ); ?>>
 
-    <?php
-
-
-        the_content( '', '&hellip;' );
-
-    ?>
+    <?php the_content( '', '&hellip;' ); ?>
 
 </div><!-- .blog-entry-summary -->

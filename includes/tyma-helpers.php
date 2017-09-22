@@ -1,10 +1,14 @@
 <?php
 
+/*
+ * Returns nicely formated course dates
+ */
+
 if ( ! function_exists( 'course_date' ) ) {
 	function course_date() {
 
 		global $post;
-		
+
 		$today = date('Y-m-d');
 
 		if ( !get_post_meta($post->ID, 'custom_datestart', true) ) {
@@ -36,3 +40,46 @@ if ( ! function_exists( 'course_date' ) ) {
 		return $course_dates;
 	}
 }
+
+
+/*
+ * Changes course post type archive sort order
+ */
+function tyma_pre_get_posts( $query ) {
+
+	// do not modify queries in the admin
+	if( is_admin() ) {
+		return $query;
+	}
+
+
+	// only modify queries for 'event' post type
+	if( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'course' ) {
+
+		//Order by custom date
+		$query->set('orderby', 'meta_value');
+		$query->set('meta_key', 'custom_datestart');
+		$query->set('order', 'ASC');
+
+		//Today's date
+		$today = date('Y-m-d');
+
+		//Only show if custom date is after today
+		$query->set('meta_query', array(
+			array(
+				'key' => 'custom_datestart',
+				'value' => $today,
+				'compare' => '>=',
+				'type' => 'CHAR'
+			)
+		) );
+
+	}
+
+
+	// return
+	return $query;
+
+}
+
+add_action('pre_get_posts', 'tyma_pre_get_posts');
