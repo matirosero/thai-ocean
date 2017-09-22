@@ -20,7 +20,10 @@ include( 'includes/debug.php' );
 // Enqueue and dequeue
 include( 'includes/enqueue.php' );
 
-// Enqueue and dequeue
+// TYMA helper functions
+include( 'includes/tyma-helpers.php' );
+
+// Shortcodes
 include( 'includes/shortcodes.php' );
 
 // Function overrides
