@@ -20,4 +20,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <?php echo $where; ?>
 
-</div><!-- .blog-entry-summary -->
+</div><!-- .course-location -->

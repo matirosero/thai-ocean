@@ -33,20 +33,13 @@ get_header(); ?>
 
 						get_template_part( 'partials/page/layout' );
 
-					}
+					} 
 
 					// Library post types
     				elseif ( is_singular( 'oceanwp_library' )
     						|| is_singular( 'elementor_library' ) ) {
 
     					get_template_part( 'partials/library/layout' );
-
-    				}
-
-					// Courses post type
-    				elseif ( is_singular( 'course' ) ) {
-
-    					get_template_part( 'partials/single/course' );
 
     				}
 
@@ -69,7 +62,7 @@ get_header(); ?>
 
 		<?php do_action( 'ocean_after_primary' ); ?>
 
-		<?php //get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 
 	</div><!-- #content-wrap -->
 

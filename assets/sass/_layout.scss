@@ -59,7 +59,8 @@ body.content-full-screen #content-wrap {
 }
 
 @media #{$large-up} {
-	.post-type-archive .content-area {
+	.post-type-archive .content-area,
+	.single-course .content-area {
 		width: 66.67% !important;
 		margin: 0 auto !important;
 		float: none;
