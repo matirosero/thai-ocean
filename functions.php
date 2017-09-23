@@ -20,6 +20,9 @@ include( 'includes/debug.php' );
 // Enqueue and dequeue
 include( 'includes/enqueue.php' );
 
+// Override OceanWP helper functions
+include( 'includes/override-helpers.php' );
+
 // TYMA helper functions
 include( 'includes/tyma-helpers.php' );
 

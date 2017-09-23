@@ -52,9 +52,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 	// Next/Prev
-	get_template_part( 'partials/single/next-prev' );
+	// get_template_part( 'partials/single/next-prev' );
 
-	get_template_part( 'partials/single/related-posts' );
+	// Related Posts
+	// get_template_part( 'partials/single/related-posts' );
 
 
 	?>
