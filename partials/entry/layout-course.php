@@ -25,13 +25,13 @@ $classes = oceanwp_post_entry_classes(); ?>
 		<?php
 
 		// Featured Image
-		get_template_part( 'partials/entry/media/blog-entry' );
+		// get_template_part( 'partials/entry/media/course' );
 
 		// Title
-		get_template_part( 'partials/entry/header' );
+		get_template_part( 'partials/entry/header', 'course' );
 
 		// Meta
-		get_template_part( 'partials/entry/meta', 'course' );
+		// get_template_part( 'partials/entry/meta', 'course' );
 
 		// Content
 		get_template_part( 'partials/entry/content', 'course' );

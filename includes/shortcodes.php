@@ -87,9 +87,7 @@ function tyma_list_courses_shortcode($atts) {
 
 			$return .= '<li>'.
 				'<a href="'.get_permalink().'" class="course-title">'.get_the_title().'</a> 
-				<ul class="meta clr">
-					<li class="meta-date"><i class="icon-clock"></i>'.$course_dates.'</li>
-				</ul>
+				<span class="course-date"><i class="icon-calendar"></i> '.$course_dates.'</span>
 			</li>';
 
         endwhile;

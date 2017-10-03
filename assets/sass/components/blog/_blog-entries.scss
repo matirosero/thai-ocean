@@ -2,56 +2,89 @@
 	padding-bottom: 0;
 }
 
-.blog-entry.post {
-	position: relative;
+.blog-entry {
 
-	.thumbnail {
+	&.post,
+	&.course {
 		position: relative;
 
-		.overlay {
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    width: 100%;
-		    height: 100%;
-		    background-color: rgba(0, 0, 0, 0.2);
-			@include opacity( 0 );
-		    text-align: center;
-		    @include transition( all .3s ease );
-	    }
-
-		&:hover .overlay {
-			@include opacity( 1 );
-		}
-
-		img {
+		.thumbnail {
+			position: relative;
+			background-color: $orange;
 			width: 100%;
-		}
-	}
 
-	ul.meta {
-		margin: 0 0 12px;
-	}
+			&.no-image {
+				display: inline-block;
 
-	.blog-entry-header {
-		margin-bottom: 20px;
+				&:after {
+					padding-top: 35%;
+					/* 16:9 ratio */
+					/* use this formula:
+						using a 22:5 ratio where 22 is A and 5 is B):
+						B / (A / 100) = C%. So 22:5 is 5 / .22 = 22.72%
+					*/
+					display: block;
+					content: '';
+				}
 
-		.entry-title {
-			font-size: 24px;
-			margin: 0;
+				.thumbnail-link {
+					display: block;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
 
-			a {
-				font-weight: 600;
-			    letter-spacing: 0.6px;
+			}
+
+
+
+			.overlay {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			    background-color: rgba(0, 0, 0, 0.2);
+				@include opacity( 0 );
+			    text-align: center;
+			    @include transition( all .3s ease );
+		    }
+
+			&:hover .overlay {
+				@include opacity( 1 );
+			}
+
+			img {
+				width: 100%;
 			}
 		}
-	}
 
-	.blog-entry-summary {
-		margin-bottom: 20px;
+		ul.meta {
+			margin: 0 0 12px;
+		}
 
-		p:last-child {
-			margin-bottom: 0;
+		.blog-entry-header {
+			margin-bottom: 20px;
+
+			.entry-title {
+				font-size: 24px;
+				margin: 0;
+
+				a {
+					font-weight: 600;
+				    letter-spacing: 0.6px;
+				}
+			}
+		}
+
+		.blog-entry-summary {
+			margin-bottom: 20px;
+
+			p:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 }

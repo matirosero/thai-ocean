@@ -55,9 +55,61 @@
 
 .course-date {
 	@include sans-serif-style;
-	font-size: 12px;
+	font-size: 2.5rem;
+	border-top: 1px solid $orange;
+	margin-top: 1.5rem;
+	padding-top: 0.5rem;
+	font-weight: bold;
+	i {
+		font-size: 2rem;
+		// color: $orange;
+	}
+
+	.course-header & {
+		border-top: 1px solid $dark-orange;
+	}
 }
 
 .course-location {
 	margin-top: 30px;
 }
+
+.course-header {
+	position: relative;
+	
+	width: 100%;
+	padding-top: 30%;
+	/* 16:9 ratio */
+	/* use this formula:
+		using a 22:5 ratio where 22 is A and 5 is B):
+		B / (A / 100) = C%. So 22:5 is 5 / .22 = 22.72%
+	*/
+	display: block;
+	content: '';
+	margin-bottom: 20px
+}
+
+.course-header-inner {
+	display: block;
+	background-color: $orange;
+	position: absolute;
+	top: 0;
+	bottom: 2px;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 20px;
+	color: $white;
+	text-align: center;
+	@include hover {
+		color: $white;
+		background-color: darken($orange, 5%);
+	}
+	.entry-title {
+		color: $white;
+	}
+}
+
