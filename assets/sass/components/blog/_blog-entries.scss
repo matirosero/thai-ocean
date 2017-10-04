@@ -13,33 +13,6 @@
 			background-color: $orange;
 			width: 100%;
 
-			&.no-image {
-				display: inline-block;
-
-				&:after {
-					padding-top: 35%;
-					/* 16:9 ratio */
-					/* use this formula:
-						using a 22:5 ratio where 22 is A and 5 is B):
-						B / (A / 100) = C%. So 22:5 is 5 / .22 = 22.72%
-					*/
-					display: block;
-					content: '';
-				}
-
-				.thumbnail-link {
-					display: block;
-					position: absolute;
-					left: 0;
-					right: 0;
-					top: 50%;
-					transform: translateY(-50%);
-				}
-
-			}
-
-
-
 			.overlay {
 			    position: absolute;
 			    top: 0;

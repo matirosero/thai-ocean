@@ -2,7 +2,7 @@
 	@include reset-list;
 
 	&.inline-course-list > li {
-		
+
 		@media #{$medium-up} {
 			display: inline-block;
 			vertical-align:top;
@@ -58,8 +58,9 @@
 	font-size: 2.5rem;
 	border-top: 1px solid $orange;
 	margin-top: 1.5rem;
-	padding-top: 0.5rem;
+	padding-top: 1.5rem;
 	font-weight: bold;
+	line-height: 1;
 	i {
 		font-size: 2rem;
 		// color: $orange;
@@ -74,42 +75,68 @@
 	margin-top: 30px;
 }
 
+.course {
+	background-color: $greybg;
+	border-bottom: $border-style;
+	border-left: $border-style;
+	border-right: $border-style;
+	padding-bottom: 0 !important;
+	margin-bottom: 40px !important;
+
+	.blog-entry-summary,
+	.course-location {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 .course-header {
 	position: relative;
-	
 	width: 100%;
-	padding-top: 30%;
-	/* 16:9 ratio */
-	/* use this formula:
-		using a 22:5 ratio where 22 is A and 5 is B):
-		B / (A / 100) = C%. So 22:5 is 5 / .22 = 22.72%
-	*/
-	display: block;
-	content: '';
-	margin-bottom: 20px
+	margin-bottom: 20px;
+
+	.course-header-inner {
+		display: block;
+		background-color: $orange;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		padding: 20px;
+		color: $white;
+		text-align: center;
+		@include hover {
+			color: $white;
+			background-color: darken($orange, 5%);
+		}
+		.entry-title {
+			color: $white;
+			@media #{$small-only} {
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	@media #{$medium-up} {
+		padding-top: 30%;
+		/* 16:9 ratio */
+		/* use this formula:
+			using a 22:5 ratio where 22 is A and 5 is B):
+			B / (A / 100) = C%. So 22:5 is 5 / .22 = 22.72%
+		*/
+		display: block;
+		content: '';
+
+		.course-header-inner {
+			position: absolute;
+			top: 0;
+			bottom: 2px;
+			left: 0;
+			right: 0;			
+		}
+	}
 }
 
-.course-header-inner {
-	display: block;
-	background-color: $orange;
-	position: absolute;
-	top: 0;
-	bottom: 2px;
-	left: 0;
-	right: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
-	padding: 20px;
-	color: $white;
-	text-align: center;
-	@include hover {
-		color: $white;
-		background-color: darken($orange, 5%);
-	}
-	.entry-title {
-		color: $white;
-	}
-}
 

@@ -28,6 +28,8 @@ $heading-font-style:   normal !default;
 // ==================================
 $white:         #fff !default;
 $offwhite:		#c6c6c6;
+$greybg:		#F8F8F8;
+$greyborder:	#eeeeee;
 $orange:		#D03E00;
 $dark-orange:	#9C0C00;
 $color-1:             #fff !default;
@@ -63,3 +65,5 @@ $heading-font-color:   $color-2 !default;
 // Link colors
 $link-color:           $color-2 !default;
 $link-hover-color:     $color-5 !default;
+
+$border-style: 1px solid $greyborder;
