@@ -232,3 +232,7 @@
 	$RESPONSIVE
 *------------------------------------*/
 @import "components/responsive";
+
+#elementor-lightbox {
+    display: none !important;
+}
