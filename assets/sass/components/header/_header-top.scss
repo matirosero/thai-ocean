@@ -50,7 +50,7 @@
 	    text-transform: uppercase;
 	}
 
-	#oceanwp-social-menu,
+	.oceanwp-social-menu,
 	#search-toggle {
 		float: none;
 	    display: table-cell;
@@ -58,12 +58,12 @@
 		height: 40px;
 	}
 
-	#oceanwp-social-menu .social-menu-inner {
+	.oceanwp-social-menu .social-menu-inner {
 		display: block;
     	height: auto;
 	}
 
-	#oceanwp-social-menu {
+	.oceanwp-social-menu {
 		right: 0;
 	    padding: 0 10px;
 
@@ -146,7 +146,7 @@
 
 }
 
-#site-header.top-header #oceanwp-mobile-menu-icon {
+#site-header.top-header .oceanwp-mobile-menu-icon {
 	float: none;
 	left: -15px;
 	right: auto;
