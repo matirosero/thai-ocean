@@ -29,7 +29,7 @@ var paths = {
 	imgPath: 'assets/img/'
 };
 
-var bsProxy = 'tyma.dev';
+var bsProxy = 'thaiyoga.test';
 
 
 ////////////////////////////////////////////////////////////////////////////////

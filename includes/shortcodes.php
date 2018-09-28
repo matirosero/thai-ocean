@@ -7,8 +7,72 @@
  */
 function register_shortcodes() {
     add_shortcode('courses', 'tyma_list_courses_shortcode');
+    add_shortcode('links', 'tyma_list_links_shortcode');
 }
 add_action( 'init', 'register_shortcodes' );
+
+
+/*
+ * List links callback
+ * - [links]
+ *
+ * Returns list of lins
+ */
+function tyma_list_links_shortcode($atts) {
+    global $wp_query,
+        $post;
+
+    extract(shortcode_atts(array(
+        // 'show' => -1,
+        'images' => 'yes',//changed
+    ), $atts));
+
+
+    // WP Query
+	$args = array(
+		'post_type' => 'link',
+		'posts_per_page' => -1,
+		'orderby' => 'title',
+		'order' => 'ASC',
+	);
+
+    $query = new WP_Query( $args );
+
+    if( ! $query->have_posts() ) :
+        return false;
+    else :
+
+		$classes = 'link-list';
+
+
+		$return = '<ul class="'.$classes.'">';
+
+
+		while( $query->have_posts() ) : $query->the_post();
+
+
+			$return .= '<li class="link">'.
+				'<a href="'.get_post_meta( get_the_ID(), 'mro_tyma_link_url', true ).'" class="link-title">'.get_the_title().'</a> 
+				<span class="link-description">'.get_post_meta( get_the_ID(), 'mro_tyma_link_text', true ).'</span>';
+
+			if ( has_post_thumbnail() ) {
+				$return .= '<a class="link-image" href="'.get_post_meta( get_the_ID(), 'mro_tyma_link_url', true ).'">'.get_the_post_thumbnail( get_the_ID(), 'full' ).'</a>';
+			}
+
+			$return .= '</li>';
+
+        endwhile;
+
+        $return .= '</ul>';
+
+        wp_reset_postdata();
+
+        return $return;
+
+    endif;
+
+}
+
 
 /*
  * List courses callback

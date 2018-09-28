@@ -1,0 +1,45 @@
+.link-list {
+	@include reset-list;
+	display: flex;
+	flex-wrap: wrap;
+
+	.link {
+		background-color: $greybg;
+		border: $border-style;
+		margin-bottom: 20px;
+		padding: 20px;
+		width: 100%;
+		align-items: center;
+		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media only screen and (min-width: 490px) {
+			margin: 0 2% 40px;
+			width: 46%;
+		}
+
+		@media #{$large-up} {
+			margin: 0 2% 40px;
+			width: 29%;
+		}
+
+		@media #{$xlarge-up} {
+			margin: 0 2% 40px;
+			width: 21%;
+		}
+	}
+
+	.link-title {
+		text-transform: uppercase;
+		font-weight: $heading-font-weight;
+		font-family: $heading-font-family;
+		line-height: 1;
+	}
+
+	.link-image {
+		margin-top: 1rem;
+	}
+}

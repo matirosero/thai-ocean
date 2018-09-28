@@ -5,7 +5,7 @@
  * @package OceanWP WordPress theme
  */
 
-if ( in_array( oceanwp_post_layout(), array( 'full-screen', 'full-width' ) ) || is_singular( 'course' ) || is_post_type_archive( 'course' ) ) {
+if ( in_array( oceanwp_post_layout(), array( 'full-screen', 'full-width' ) ) || is_singular( 'course' ) || is_post_type_archive( 'course' ) || is_singular( 'link' ) || is_post_type_archive( 'link' ) ) {
 	return;
 } ?>
 
