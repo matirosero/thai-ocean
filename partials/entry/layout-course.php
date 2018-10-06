@@ -36,6 +36,9 @@ $classes = oceanwp_post_entry_classes(); ?>
 		// Content
 		get_template_part( 'partials/entry/content', 'course' );
 
+		// Contact
+		get_template_part( 'partials/single/course', 'contact' );
+
 		// Location
 		get_template_part( 'partials/single/course', 'location' );
 
