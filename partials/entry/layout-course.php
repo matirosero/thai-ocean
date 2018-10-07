@@ -43,7 +43,7 @@ $classes = oceanwp_post_entry_classes(); ?>
 		get_template_part( 'partials/single/course', 'location' );
 
 		// Read more button
-		get_template_part( 'partials/entry/readmore' );
+		// get_template_part( 'partials/entry/readmore' );
 
 
 

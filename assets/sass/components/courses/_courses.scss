@@ -71,7 +71,8 @@
 	}
 }
 
-.course-location {
+.course-location,
+.course-contact {
 	margin-top: 30px;
 }
 
@@ -84,7 +85,8 @@
 	margin-bottom: 40px !important;
 
 	.blog-entry-summary,
-	.course-location {
+	.course-location,
+	.course-contact {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -138,6 +140,59 @@
 		}
 	}
 }
+
+.course-contact {
+	ul {
+		@include reset-list;
+	}
+	li {
+		margin-bottom: 1em;
+		&:first-child {
+			margin-top: 1em;
+		}
+	}
+
+	.contact-title {
+		margin-bottom: 0;
+	}
+
+	.fa {
+		display: none;
+	}
+
+	[class^="contact-"] {
+		display: block;
+	}
+}
+
+@supports (display: grid) {
+  	.course-contact {
+  		li {
+  			display: grid;
+  			grid-template-columns: 1.5em auto;
+  			align-items: center;
+  		}
+  		.contact-title {
+  			grid-column-start: 1;
+   			grid-column-end: 2;
+   			margin: 0;
+   			span {
+   				display: none;
+   			}
+  		}
+  		.fa {
+  			display: block;
+  		}
+  		span[class^="contact-"] {
+  			grid-column-start: 2;
+   			grid-column-end: 3;
+  		}
+  	}
+}
+
+
+
+
 
 
 
