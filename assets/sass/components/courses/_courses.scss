@@ -174,11 +174,16 @@
 	padding: 20px;
 	float: right;
 	text-align: center;
+	max-width: 30vw;
+	min-width: 145px;
 	h4 {
 		margin-top: 0;
 	}
 	ul {
 		@include reset-list;
+	}
+	@media #{$medium-up} {
+		max-width: 245px;
 	}
 }
 
