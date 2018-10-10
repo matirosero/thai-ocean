@@ -34,6 +34,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	// Content
 	get_template_part( 'partials/single/content' );
 
+	// Pricing
+	get_template_part( 'partials/single/course', 'pricing' );
+
 	// Contact
 	get_template_part( 'partials/single/course', 'contact' );
 

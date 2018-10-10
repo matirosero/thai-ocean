@@ -33,8 +33,12 @@ $classes = oceanwp_post_entry_classes(); ?>
 		// Meta
 		// get_template_part( 'partials/entry/meta', 'course' );
 
+		// Pricing
+		get_template_part( 'partials/single/course', 'pricing' );
+
 		// Content
 		get_template_part( 'partials/entry/content', 'course' );
+
 
 		// Contact
 		get_template_part( 'partials/single/course', 'contact' );

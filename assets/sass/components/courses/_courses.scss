@@ -49,7 +49,8 @@
 }
 
 .course-title,
-.course-date {
+.course-date,
+.course-pricing {
 	display: block;
 }
 
@@ -86,7 +87,8 @@
 
 	.blog-entry-summary,
 	.course-location,
-	.course-contact {
+	.course-contact,
+	.course-pricing {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -162,6 +164,21 @@
 
 	[class^="contact-"] {
 		display: block;
+	}
+}
+
+.course-pricing {
+	margin: 0 20px 20px;
+	border: $border-style;
+	background: #fff;
+	padding: 20px;
+	float: right;
+	text-align: center;
+	h4 {
+		margin-top: 0;
+	}
+	ul {
+		@include reset-list;
 	}
 }
 
